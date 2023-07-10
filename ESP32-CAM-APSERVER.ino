@@ -160,6 +160,8 @@ void setup()
     if (WiFi.status() == WL_CONNECTED)
     {
       WiFi.softAP((WiFi.localIP().toString() + "_" + (String)apssid).c_str(), appassword);
+      Serial.println("+");
+      Serial.println("SoftAP Name: " + WiFi.localIP().toString() + "_" + (String)apssid);
       Serial.println("");
       Serial.println("STAIP address: ");
       Serial.println(WiFi.localIP());
